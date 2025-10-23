@@ -1,0 +1,8 @@
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+    let response = await fetch("https://aql7k3hcy3sb2aatwyrhtenpse0lnctk.lambda-url.us-east-1.on.aws/");
+    let data = await response.json();
+    counter.innerHTML = `This page has ${data.views} views!`;
+}
+
+updateCounter();
