@@ -3,7 +3,7 @@ name: Upload website to S3 and Invalidate CloudFront Cache
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
